@@ -1,13 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Caso Practico</title>
     <link rel="stylesheet" href="css/styles.css">
+
 </head>
 <body>
+
     <h1>Caso práctico</h1>
+
     <div class="ejercicio">
         <h2>Ejercicio 1</h2>
         <p>Elaborar una pequeña función en javascript que recibiendo un array con nombres devuelva otro array con otro array de la misma longitud y cuyos elementos sean la longitud de cada nombre en el mismo orden.</p>
@@ -17,7 +21,7 @@
             <div id="longitudCadenasArray"></div>
         </div>
         <br>
-        <img src="media/array.png" alt="array">
+        <a href="js/app.js"><img src="media/array.png" alt="array"></a>
     </div>
 
     <h2 style="text-align: center;">Ejercicio 2</h2>
@@ -25,7 +29,7 @@
     <ul class=”no” style="text-align: center; list-style-position: inside;">
         <li>Hola mundo</li>
     </ul>
-    <div style="text-align: center;"><img src="media/texto_centrado.png" alt="text_center"></div>
+    <div style="text-align: center;"><img src="media/texto_centrado.png" alt="texto_centrado"></div>
 
     <div class="ejercicio">
         <h2>Ejercicio 3</h2>    
@@ -49,7 +53,8 @@
     <div class="ejercicio">
         <h2>Ejercicio 5</h2>
         <p>Dar la fecha y hora exactas un timestamp igual a 1000 en la zona horaria de Moscú</p>
-
+        <p id="fecha"></p>
+        <img src="media/timestamp.png" alt="timestamp" width="40%">
     </div>
     
     <div class="ejercicio">
@@ -68,71 +73,30 @@
     <div class="ejercicio">
         <h2>Ejercicio 7</h2>
         <p>Implementa un código php que devuelva los n primeros números primos como un array. Siendo n un número entero que se le pueda pasar a la función que lo implemente.</p>
-        <form method="post">
-            <label for="cantidad">Introduce n (cantidad de primos a mostrar):</label>
-            <input type="number" name="cantidad" id="cantidad" min="1" required>
-            <button type="submit">Generar</button>
-        </form>
-
-        <div class="resultado">
-            <?php
-            function esPrimo($num) {
-            if ($num < 2) return false;
-            for ($i = 2; $i <= sqrt($num); $i++) {
-                if ($num % $i == 0) {
-                return false;
-                }
-            }
-            return true;
-            }
-
-            function primerosPrimos($n) {
-            $primos = [];
-            $numero = 2;
-            while (count($primos) < $n) {
-                if (esPrimo($numero)) {
-                $primos[] = $numero;
-                }
-                $numero++;
-            }
-            return $primos;
-            }
-
-            if ($_SERVER["REQUEST_METHOD"] == "POST") {
-            $n = intval($_POST["cantidad"]);
-            $resultado = primerosPrimos($n);
-            echo "Los primeros $n números primos son:<br>";
-            echo implode(", ", $resultado);
-            }
-            ?>
-        </div>
+        <img src="media/numeros_primos_1.png" alt="resultado_numeros_primos">
+        <br>
+        <img src="media/numeros_primos_2.png" alt="code_numeros_primos" width="35%">
+        <p></p><a href="index.php">Codigo detallado</a></p>
     </div>
 
     <div class="ejercicio">
         <h2>Ejercicio 8</h2>
         <p>Haz un pequeño código ofuscado en javascript que saque por consola el mensaje “¡Hola mundo!” (sin las comillas)</p>
-        <script>
-            (function(){
-            var x = ['\u00A1','H','o','l','a',' ','m','u','n','d','o','!'];
-            var msg = x.join('');
-            var y = console['l'+'o'+'g'];
-            y(msg);
-            })();
-        </script>
-        <p>Revisar Consola Inspeccionar</p>
+        <img src="media/hola_mundo_consola_1.png" alt="hola_mundo_consola">
+        <br>
+        <img src="media/hola_mundo_consola_2.png" alt="hola_mundo_consola" width="40%">
     </div>
 
     <div class="ejercicio">
         <h2>Ejercicio 9</h2>
         <p>Encuentra el password de 2 caracteres cuyo hash md5 sea 49f68a5c8493ec2c0bf489821c21fc3b</p>
-
+        <a href="hash.py"><img src="media/hash_md5.png" alt="hash_md5"></a>
     </div>
 
     <div class="ejercicio">
         <h2>Ejercicio 10</h2>
-        <p>¿Una misma dirección IP en un mismo día y hora puede proceder de más de una persona?</p>
-        <br>
-        <p>Si, debido a que la IP pública es la misma en los diferentes dispositivos conetactados de una red</p>
+        <p><b>¿Una misma dirección IP en un mismo día y hora puede proceder de más de una persona?</b></p>
+        <p><b>Respuesta: </b>Si, debido a que la IP pública es la misma en los diferentes dispositivos conetactados de una red</p>
     </div>
 
     <script src="js/app.js"></script>
